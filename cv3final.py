@@ -579,7 +579,7 @@ train_loop(model=model,
 
 # Load the model for inference
 model.eval()
-model.load_state_dict(torch.load("2025-05-06_11-54-09/resnext101_64x4d_2.pth"))
+model.load_state_dict(torch.load(f"{checkpoint_path}"))
 
 # Open the test dataset
 with open("hw3-data-release/test_image_name_to_ids.json") as f:
